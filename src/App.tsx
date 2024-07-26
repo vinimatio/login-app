@@ -6,7 +6,6 @@ import MainRoutes from "./routes";
 import { createLocalStorage, getAllLocalStorage } from "./services/storage";
 
 function App() {
-  
   !getAllLocalStorage && createLocalStorage();
 
   return (
