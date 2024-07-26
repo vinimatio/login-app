@@ -15,6 +15,7 @@ export const Header = ({ title }: IHeaderProps) => {
   const logOut = () => {
     setIsLoggedIn(false);
     changeLocalStorage({ login: false });
+    navigate("/");
   };
 
   return (

@@ -21,7 +21,9 @@ export const AppContextProvider = ({ children }: AppContextProviderProps) => {
     if (session) {
       const { login } = JSON.parse(session);
       setIsLoggedIn(login);
-      userData?.id && navigate(`/conta/${userData.id}`);
+      if (login) {
+        navigate(`/conta/${userData?.id}`);
+      }
     }
   }, [session, userData]);
 

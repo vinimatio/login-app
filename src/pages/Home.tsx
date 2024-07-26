@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { AppContext } from "../components/AppContext";
 import { changeLocalStorage, getAllLocalStorage } from "../services/storage";
 
-export const Home = ({ children }: any) => {
+export const Home = () => {
   const [emailForm, setEmail] = useState("");
   const [passForm, setPass] = useState("");
   const [locallogged, setLocalLogged] = useState(false);
