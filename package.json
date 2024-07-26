@@ -62,5 +62,5 @@
     "globals": "^15.8.0",
     "typescript-eslint": "^7.16.0"
   },
-  "homepage": "https://vinimatio.github.io/login-app/"
+  "homepage": "https://vinimatio.github.io/login-app"
 }

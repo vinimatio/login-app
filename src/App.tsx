@@ -9,7 +9,7 @@ function App() {
   !getAllLocalStorage && createLocalStorage();
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <AppContextProvider>
         <ChakraProvider>
           <Layout>
