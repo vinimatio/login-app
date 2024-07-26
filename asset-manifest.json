@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.js": "/login-app/static/js/main.3a32982a.js",
+    "main.js": "/login-app/static/js/main.f0cd6dde.js",
     "static/js/453.2eac4a2e.chunk.js": "/login-app/static/js/453.2eac4a2e.chunk.js",
     "index.html": "/login-app/index.html",
-    "main.3a32982a.js.map": "/login-app/static/js/main.3a32982a.js.map",
+    "main.f0cd6dde.js.map": "/login-app/static/js/main.f0cd6dde.js.map",
     "453.2eac4a2e.chunk.js.map": "/login-app/static/js/453.2eac4a2e.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.3a32982a.js"
+    "static/js/main.f0cd6dde.js"
   ]
 }
