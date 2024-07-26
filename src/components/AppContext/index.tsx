@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useEffect, useRef, useState } from "react";
 import { IAppContext, AppContextProviderProps } from "./types";
 import { api } from "../../services/api";
 import { IAccount } from "../../services/types";
@@ -12,10 +12,12 @@ export const AppContextProvider = ({ children }: AppContextProviderProps) => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const navigate = useNavigate();
+  const navigateRef = useRef(navigate);
 
   const session = getAllLocalStorage();
 
   useEffect(() => {
+    const navigate = navigateRef.current;
     if (session) {
       const { login } = JSON.parse(session);
       setIsLoggedIn(login);

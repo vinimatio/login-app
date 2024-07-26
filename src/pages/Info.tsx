@@ -1,4 +1,4 @@
-import { Center, SimpleGrid } from "@chakra-ui/react";
+import { Center, SimpleGrid, Spinner } from "@chakra-ui/react";
 import CardInfo from "../components/CardInfo";
 import { useContext } from "react";
 import { AppContext } from "../components/AppContext";
@@ -9,8 +9,16 @@ const Info = () => {
   return (
     <Center>
       <SimpleGrid columns={2} spacing={8} paddingTop={16}>
-        <CardInfo mainText="Usuário:" content={userData?.name}></CardInfo>
-        <CardInfo mainText="Email:" content={userData?.email}></CardInfo>
+        {userData === undefined || userData === null ? (
+          <Center>
+            <Spinner size="xl" color="white" />
+          </Center>
+        ) : (
+          <>
+            <CardInfo mainText="Usuário:" content={userData?.name}></CardInfo>
+            <CardInfo mainText="Email:" content={userData?.email}></CardInfo>
+          </>
+        )}
       </SimpleGrid>
     </Center>
   );
